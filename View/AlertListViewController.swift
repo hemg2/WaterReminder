@@ -17,8 +17,8 @@ class AlertListViewController: UITableViewController {
         
         
         
-        let nibName = UINib(nibName: "AlertList", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "AlertListCell")
+        let nibName = UINib(nibName: "AlertCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "AlertCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
