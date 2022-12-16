@@ -79,6 +79,9 @@ extension AlertListViewController {
         cell.timeLabel.text = alerts[indexPath.row].time
         cell.meridiemLabel.text = alerts[indexPath.row].meridiem
         
+        cell.alertSwitch.tag = indexPath.row
+        
+        
         return cell
     }
     
@@ -93,7 +96,9 @@ extension AlertListViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete:
-            //노티삭제
+            self.alerts.remove(at: indexPath.row)
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alerts), forKey: "alerts")
+            self.tableView.reloadData()
             return
             return
         default:
