@@ -102,10 +102,9 @@ extension AlertListViewController {
             self.alerts.remove(at: indexPath.row)
             UserDefaults.standard.set(try? PropertyListEncoder().encode(self.alerts), forKey: "alerts")
             
-            userNotificationCenter.removeDeliveredNotifications(withIdentifiers: [alerts[indexPath.row].id])
+            userNotificationCenter.removePendingNotificationRequests(withIdentifiers: [alerts[indexPath.row].id])
             
             self.tableView.reloadData()
-            return
             return
         default:
             break
