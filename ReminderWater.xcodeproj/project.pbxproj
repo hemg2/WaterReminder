@@ -68,7 +68,6 @@
 		63A6EE60294AED0E00E442EA /* ReminderWater */ = {
 			isa = PBXGroup;
 			children = (
-				63A6EE82294DAF6B00E442EA /* UNNotificationCenter.swift */,
 				63A6EE61294AED0E00E442EA /* AppDelegate.swift */,
 				63A6EE63294AED0E00E442EA /* SceneDelegate.swift */,
 				63A6EE67294AED0E00E442EA /* Main.storyboard */,
@@ -84,6 +83,7 @@
 			children = (
 				63A6EE76294AEEF200E442EA /* AlertListViewController.swift */,
 				63A6EE80294AF7D800E442EA /* AddAlertViewController.swift */,
+				63A6EE82294DAF6B00E442EA /* UNNotificationCenter.swift */,
 				63A6EE7F294AF25D00E442EA /* Cell */,
 			);
 			path = View;
